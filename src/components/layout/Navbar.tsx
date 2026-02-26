@@ -15,7 +15,7 @@ const navLinks: NavItem[] = [
 
 const Navbar = () => {
     const title: string = 'AstroSpace';
-    const [open, setOpen] = useState<boolean>(false);
+    const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
     return (
         <nav className='w-[90%] md:w-[70%] lg:w-[50%] px-4 py-3 md:py-0 flex justify-between items-center bg-[#101923] rounded-xl fixed top-4 left-1/2 -translate-x-1/2 border-cyan-500 border-2 relative'>
@@ -44,17 +44,17 @@ const Navbar = () => {
             </div>
 
             {/* Menu Icon - Visible Only */}
-            <button className="block md:hidden" onClick={() => setOpen(!open)}>
-                {open ? <Close className="text-cyan-500 cursor-pointer" fontSize="large" /> : <Menu className="text-cyan-500 cursor-pointer" fontSize="large" />}
+            <button className="block md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+                {menuOpen ? <Close className="text-cyan-500 cursor-pointer" fontSize="large" /> : <Menu className="text-cyan-500 cursor-pointer" fontSize="large" />}
             </button>
 
             {/* Menu box for small devices */}
-            {open && (
+            {menuOpen && (
                 <div className="absolute top-full mt-4 left-0 w-full bg-[#101923] border border-cyan-500 rounded-2xl shadow-lg p-6 flex flex-col gap-6 md:hidden">
                     {navLinks.map((link, idx) => (
                         <a
                             key={idx}
-                            className='cursor-pointer text-white hover:text-yellow-400 hover:underline underline-offset-4 transition font-mono text-xl' onClick={() => setOpen(false)}>
+                            className='cursor-pointer text-white hover:text-yellow-400 hover:underline underline-offset-4 transition font-mono text-xl' onClick={() => setMenuOpen(false)}>
                             {link.name}
                         </a>
                     ))}
