@@ -1,5 +1,6 @@
 import { Close, Menu } from "@mui/icons-material";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 // import React from 'react'
 interface NavItem {
@@ -34,12 +35,13 @@ const Navbar = () => {
             {/* Links - Hidden Everywhere Above Mobile */}
             <div className="hidden md:flex items-center gap-10 px-8 py-4 text-white">
                 {navLinks.map((link, idx) => (
-                    <a
+                    <Link
+                        to={link.path}
                         key={idx}
                         className='cursor-pointer hover:text-yellow-400 hover:underline underline-offset-4 transition font-mono text-xl'
                     >
                         {link.name}
-                    </a>
+                    </Link>
                 ))}
             </div>
 
@@ -52,11 +54,12 @@ const Navbar = () => {
             {menuOpen && (
                 <div className="absolute top-full mt-4 left-0 w-full bg-[#101923] border border-cyan-500 rounded-2xl shadow-lg p-6 flex flex-col gap-6 md:hidden">
                     {navLinks.map((link, idx) => (
-                        <a
+                        <Link
+                            to={link.path}
                             key={idx}
                             className='cursor-pointer text-white hover:text-yellow-400 hover:underline underline-offset-4 transition font-mono text-xl' onClick={() => setMenuOpen(false)}>
                             {link.name}
-                        </a>
+                        </Link>
                     ))}
                 </div>
             )}
