@@ -1,6 +1,6 @@
 import { Close, Menu } from "@mui/icons-material";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 // import React from 'react'
 interface NavItem {
@@ -17,13 +17,14 @@ const navLinks: NavItem[] = [
 const Navbar = () => {
     const title: string = 'AstroSpace';
     const [menuOpen, setMenuOpen] = useState<boolean>(false);
+    const location = useLocation();
 
     return (
-        <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] md:w-[75%] lg:w-[60%] px-6 py-3 flex justify-between items-center bg-white/70 backdrop-blur-xl border border-white/40 shadow-lg shadow-black/10 rounded-2xl">
+        <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] md:w-[75%] lg:w-[60%] px-6 py-3 flex justify-between items-center bg-[#101923] backdrop-blur-xl border border-white/40 shadow-lg shadow-black/10 rounded-2xl">
 
             {/* Logo */}
             <div>
-                <h1 className="font-mono text-2xl font-bold tracking-wide text-gray-900">
+                <h1 className="font-mono text-2xl font-bold tracking-wide text-white">
                     {title.split("").map((char, idx) => (
                         <span
                             key={idx}
@@ -36,14 +37,14 @@ const Navbar = () => {
             </div>
 
             {/* Desktop Links */}
-            <div className="hidden md:flex items-center gap-8 text-gray-700 font-medium">
+            <div className="hidden md:flex items-center gap-8 text-white font-medium">
                 {navLinks.map((link, idx) => (
                     <Link
                         to={link.path}
                         key={idx}
                         className="relative group transition"
                     >
-                        <span className="hover:text-cyan-600 transition duration-300">
+                        <span className={`${location.pathname === link.path ? 'text-cyan-300 offset-2' : ''} hover:text-cyan-600 transition duration-300 text-base`}>
                             {link.name}
                         </span>
 
@@ -67,14 +68,14 @@ const Navbar = () => {
 
             {/* Mobile Dropdown */}
             {menuOpen && (
-                <div className="absolute top-full mt-4 left-0 w-full bg-white/90 backdrop-blur-xl border border-gray-200 rounded-2xl shadow-xl p-6 flex flex-col gap-6 md:hidden">
+                <div className="absolute top-full mt-4 left-0 w-full bg-[#101923] backdrop-blur-xl border border-gray-200 rounded-2xl shadow-xl p-6 flex flex-col gap-6 md:hidden">
 
                     {navLinks.map((link, idx) => (
                         <Link
                             to={link.path}
                             key={idx}
                             onClick={() => setMenuOpen(false)}
-                            className="text-gray-800 font-medium hover:text-cyan-600 transition duration-300"
+                            className="text-white font-medium hover:text-cyan-600 transition duration-300"
                         >
                             {link.name}
                         </Link>
