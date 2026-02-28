@@ -73,20 +73,6 @@ const Home = () => {
 
                     </section>
 
-                    {/* 🎨 Background Animation */}
-                    <style>
-                        {`
-      @keyframes gradient {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-      }
-      .animate-gradient {
-        animation: gradient 18s ease infinite;
-      }
-    `}
-                    </style>
-
                 </main>
             )}
 
