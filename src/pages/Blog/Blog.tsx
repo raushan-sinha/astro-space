@@ -1,6 +1,5 @@
-import BlogContent from "./sections/BlogContent";
-import HeroSection from "./sections/HeroSection";
-import ServicesSection from "./sections/ServicesSection";
+import { BlogContent, HeorSection, ServiceSection } from "./sections";
+
 
 const Blog = () => {
     return (
@@ -12,13 +11,13 @@ const Blog = () => {
             <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse" />
 
             {/* Hero Section */}
-            <HeroSection />
+            <HeorSection />
 
             {/* Blog Content */}
             <BlogContent />
 
             {/* Services Section */}
-            <ServicesSection />
+            <ServiceSection />
 
         </main>
     )
