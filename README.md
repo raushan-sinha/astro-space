@@ -1,7 +1,7 @@
 # AstroSpace [https://astro-space-phi.vercel.app/]
-------
+-------
 
-<h1>Daily Cosmic Intelligence Powered by NASA APIs</h1>
+## Daily Cosmic Intelligence Powered by NASA APIs
 
 AstroSpace is a modern web application that delivers daily space imagery and scientific insights using official NASA public APIs. From breathtaking astronomy visuals to real-time asteroid tracking — this platform transforms open cosmic data into an immersive frontend experience.
 
