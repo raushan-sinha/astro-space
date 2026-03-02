@@ -1,73 +1,55 @@
-# React + TypeScript + Vite
+# AstroSpace [https://astro-space-phi.vercel.app/]
+------
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h1>Daily Cosmic Intelligence Powered by NASA APIs</h1>
 
-Currently, two official plugins are available:
+AstroSpace is a modern web application that delivers daily space imagery and scientific insights using official NASA public APIs. From breathtaking astronomy visuals to real-time asteroid tracking — this platform transforms open cosmic data into an immersive frontend experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+----------------
 
-## React Compiler
+## Features -
+1. Astronomy Picture of the Day (APOD)
+2. Fetches NASA's daily featured astronomical image
+3. Includes detailed scientific explanation
+4. Supports high-resolution media
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-------
 
-## Expanding the ESLint configuration
+## Why This Project Matters
+1. Demonstrates API integration skills
+2. Shows real-time data handling
+3. Clean UI + structured REST consumption
+4. Space + science themed niche positioning
+5. Portfolio-ready frontend projects
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---------
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Tech Stack used:
+1. React + TypeScript
+2. Tailwind CSS
+3. axios() for API fetching
+4. NASA Open APIs
+5. Environment Variables (.env)
+6. Deployment - Vercel
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---------------------
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Clone the Repository
+1. git clone https://github.com/your-username/astro-space.git
+2. cd astro-space
+3. npm install
+4. Get NASA API Key
+5. Visit: https://api.nasa.gov
+6. Generate your free API key
+7. npm run dev
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+----
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Future Enhancements
+1. Search & filter for specific dates
+2. Interactive Earth map visualization
+3. Daily notification integration
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+--------
+
+### Creator - Raushan Sinha
