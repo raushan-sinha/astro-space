@@ -5,12 +5,12 @@ interface ImageProps {
 
 const Image = ({ src, alt }: ImageProps) => {
     return (
-        <img
-            src={src}
-            alt={alt}
-            loading="lazy"
-            className="w-full h-56 sm:h-72 lg:h-80 object-cover object-center transition-transform duration-500 hover:scale-105"
-        />
+            <img
+                src={src}
+                alt={alt}
+                loading="lazy"
+                className="w-full rounded-xl shadow-lg"
+            />
     );
 }
 
