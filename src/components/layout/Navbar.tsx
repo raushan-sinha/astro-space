@@ -11,7 +11,6 @@ interface NavItem {
 const navLinks: NavItem[] = [
     { name: 'Home', path: '/' },
     { name: 'Blog', path: '/blog' },
-    { name: 'Feedback', path: '/feedback' },
 ];
 
 const Navbar = () => {
